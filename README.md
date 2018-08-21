@@ -9,7 +9,8 @@ This python script rearranges atom number, atom name and atom coordinates of gro
 This script is able to solve the issue of non-matching atoms during MD Simulations of protein-ligand system in GROMACS for small moleucles/ligands.
 
 Most of topologies (itp files) and gromacs coordinates(gro files) for these ligands ar either obtained from PRODRG Server or ATB Server.
-These gro files are little optimized to generate topolgies and thus atom numbers, atom names and atomic coordinates are rearranged than required.
+These gro files are little optimized to generate topolgies and thus atom numbers, atom names and atomic coordinates are rearranged.
+So, script can resolve such issue.
 
 
 Mandatory:
@@ -20,8 +21,6 @@ For example:
 2. The last line of coordinates should be contain this line (Add this line at the end of gro file):
      0.00000   0.00000   0.00000
 """
-
-=====================================
 
 USAGES for "itp_atom_num_gro.py":
 =================================
