@@ -9,9 +9,9 @@ parser.add_argument("g", help="gro file name")
 args = parser.parse_args()
 
 ref_itp = args.i
-print ref_itp
+print(ref_itp)
 query_gro = args.g
-print query_gro
+print(query_gro)
 
 def itpReader(p):
     itp_atom_num = []    
@@ -41,17 +41,17 @@ def gro_to_change(query_gro):
                 checker = False
             if checker:
                 linesZ = linesX.split()[1]
-                print linesZ
+                print(linesZ)
                 #name = "_".join(itemgetter(1,2)(linesZ))
                 name = linesZ
-                print name
-                print linesX
+                print(name)
+                print(linesX)
                 gro_dict[name] = linesX.rstrip('\n')
     return gro_dict
 
 b = gro_to_change(query_gro)
 if b == {}:
-    print "Dictionary is empty"
+    print("Dictionary is empty")
 def write_gro(a,b):
     counter = 0
     with open("output.gro","w") as out:
